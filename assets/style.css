@@ -1,0 +1,88 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  color: #616161;
+  font-family: 'Catamaran', sans-serif;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.introduction-block {
+  padding: 45px 25px;
+  font-weight: 200;
+  text-align: center;
+}
+
+.introduction-block h1{
+  font-weight: 200;
+  color: #333;
+}
+
+.card-container {
+  width: 100%;
+  background-color: #f0f0f0;
+  padding: 10px;
+  column-count: 3;
+  box-sizing: border-box;
+}
+
+.card-container .card {
+  padding: 15px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  background-color: #fff;
+  min-height: 300px;
+  border-radius: 2px;
+  display: inline-block;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity .5s ease-in;
+}
+
+.card-container .card.shown {
+  opacity: 1;
+}
+
+.card-container .card figure {
+  margin: 0;
+}
+
+.card-container .card figure img{
+  height: 260px;
+  width: 100%;
+}
+
+.card-container .card figure figcaption {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 13px;
+  color: #828282;
+  border-radius: 2px;
+}
+
+/**/
+
+.card-container .card.alt{
+  height: 400px;
+}
+.card-container .card.alt img {
+  height: 340px;
+}
+
+/**/
+
+@media (max-width: 960px){
+  .card-container  {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 480px){
+  .card-container  {
+    column-count: 1;
+  }
+}
